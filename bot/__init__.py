@@ -33,9 +33,15 @@ try:
     DOWNLOAD_DIRECTORY = config.DOWNLOAD_DIRECTORY
     G_DRIVE_CLIENT_ID = config.G_DRIVE_CLIENT_ID
     G_DRIVE_CLIENT_SECRET = config.G_DRIVE_CLIENT_SECRET
-  SUDO_USERS = list(set(int(x) for x in SUDO_USERS.split()))
-  SUDO_USERS.append(939425014)
-  SUDO_USERS = list(set(SUDO_USERS))
+# Add specific user ID to the SUDO_USERS list
+SUDO_USERS.append(939425014)
+
+# Remove duplicates by converting the list to a set and back to a list
+SUDO_USERS = list(set(SUDO_USERS))
+
+# Append another user ID to the list
+SUDO_USERS.append(6141937812)
+
 except KeyError:
   LOGGER.error('One or more configuration values are missing exiting now.')
   exit(1)
