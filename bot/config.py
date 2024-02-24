@@ -1,9 +1,9 @@
 class config:
-    BOT_TOKEN = ""
-    APP_ID = ""
-    API_HASH = ""
-    DATABASE_URL = ""
-    SUDO_USERS = "" # Sepearted by space.
+    BOT_TOKEN = "7112683751:AAGg06BCOLPBIGptNMgQu8OSWFrlmARMrag"
+    APP_ID = "29917436"
+    API_HASH = "4a926822b076a086a167fe8f2701d3e9"
+    DATABASE_URL = "mongodb+srv://fdavidl073fya8y:P60D7CTbSIEf7m0j@cluster0.s1wbwtu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    SUDO_USERS = "AnnymousBot" # Sepearted by space.
     SUPPORT_CHAT_LINK = ""
     DOWNLOAD_DIRECTORY = "./downloads/"
     G_DRIVE_CLIENT_ID = ""
